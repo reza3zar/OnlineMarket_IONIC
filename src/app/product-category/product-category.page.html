@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button color="secondary"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+          <ion-text color="light">
+            <ion-text color="light" class="fw700">برگشت</ion-text>
+          </ion-text>
+      </ion-title>
+ </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content color="dark"  >
+      <img src="../../assets/img/1000000043.jpg">
+
+          <!-- <div    *ngFor="let productItem of productCollection">
+              <div class="container carousel-cell">
+                <a  *ngIf="productItem.discount!=0" class="number-ribbon">{{productItem.discount}}%</a>
+                  <div class="imgBx">
+                    <img   src="../../assets/product/{{productItem.imgsrc}}.jpg"/>
+                  </div>
+                    <div class="details">
+                      <div class="content">
+                        <h2>{{productItem.name}}
+                          <br>
+                        </h2>
+                          <p *ngIf="productItem.discount==0" style="text-decoration: line-through; color:white">عدم تخفیف</p> 
+                          <p *ngIf="productItem.discount!=0" style="text-decoration: line-through;">{{productItem.oldprice}} تومان</p>  
+    
+                        <h3>{{productItem.price}} تومان</h3>
+                        <button>+</button>
+                      </div> 
+                    </div>
+                </div>
+
+             
+    
+              </div> -->
+   
+    <ion-item style="margin:9px 0px">
+        <ion-label>
+          <h3>گوشت قرمز</h3>
+        </ion-label>
+            <ion-icon slot="end" class="pinter" name="more"></ion-icon>
+    </ion-item>
+ 
+
+      <div class="main-carousel cardSize"  >
+          <div class="container carousel-cell"  *ngFor="let productItem of productCollection">
+              <a  *ngIf="productItem.discount!=0" class="number-ribbon">{{productItem.discount}}%</a>
+              <div class="imgBx">
+                <img   src="../../assets/product/{{productItem.imgsrc}}.jpg"/>
+              </div>
+                <div class="details">
+                  <div class="content">
+                    <h2>{{productItem.name}}
+                      <br>
+                    </h2>
+                      <p *ngIf="productItem.discount==0" style="text-decoration: line-through; color:white">عدم تخفیف</p> 
+                      <p *ngIf="productItem.discount!=0" style="text-decoration: line-through;">{{productItem.oldprice}} تومان</p>  
+
+                    <h3>{{productItem.price}} تومان</h3>
+                    <button>+</button>
+                  </div> 
+          </div>
+          </div>
+      </div>
+      <ion-item style="margin:9px 0px ">
+        <ion-label>
+          <h3>گوشت سفید</h3>
+        </ion-label>
+            <ion-icon slot="end" class="pinter" name="more"></ion-icon>
+    </ion-item>
+
+    <div class="main-carousel cardSize"  >
+      <div class="container carousel-cell"  *ngFor="let productItem of productCollection2">
+          <a  *ngIf="productItem.discount!=0" class="number-ribbon">{{productItem.discount}}%</a>
+          <div class="imgBx">
+            <img   src="../../assets/product/{{productItem.imgsrc}}.jpg"/>
+          </div>
+            <div class="details">
+              <div class="content">
+                <h2>{{productItem.name}}
+                  <br>
+                </h2>
+                  <p *ngIf="productItem.discount==0" style="text-decoration: line-through; color:white">عدم تخفیف</p> 
+                  <p *ngIf="productItem.discount!=0" style="text-decoration: line-through;">{{productItem.oldprice}} تومان</p>  
+
+                <h3>{{productItem.price}} تومان</h3>
+                <button>+</button>
+              </div> 
+      </div>
+      </div>
+  </div>
+
+  <br>
+
+  </ion-content>

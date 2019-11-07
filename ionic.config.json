@@ -1,0 +1,8 @@
+{
+  "name": "IMEApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "26a6fe75"
+}

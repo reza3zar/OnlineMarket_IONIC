@@ -1,0 +1,165 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-text color="light">
+          <ion-text color="light" class="fw700">سامانه اطلاع رسانی بورس کالا</ion-text>
+        </ion-text>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" color="medium"  >
+        <ion-icon name="notifications"></ion-icon>
+        <ion-badge color="dark" slot="end" (click)="showNotifications()">4</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-searchbar placeholder="جستجو نماد"    ></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" color="medium"  >
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  color="whight">
+ 
+<ion-item> 
+  <div class="wrapper">
+     
+    <div class="profileWidget" style="background: #173579;">
+       <h4>بازار صنعتی</h4>
+       <div class="profileBanner" style="background-image: url('../../assets/icon/conveyor.png');">
+
+       </div>
+       <h5>اطلاعات پایه</h5>
+       <ul style="   background:rgb(186, 207, 211)">
+          <li><h4>125</h4><span>تعداد عرضه</span></li><li><h4>344</h4><span>حجم عرضه‌ها</span></li>
+       </ul>
+    </div>
+    
+ </div>
+
+ 
+ <div class="wrapper"> 
+     
+  <div  class="profileWidget" style="background: #0a5f15;">
+     <h4>بازار کشاورزی</h4>
+     <div class="profileBanner" style="background-image: url('../../assets/icon/tractor.png');">
+
+     </div>
+     <h5>اطلاعات پایه</h5>
+     <ul style="   background: rgb(185, 218, 172);">
+        <li><h4>12</h4><span>تعداد عرضه</span></li><li><h4>475</h4><span>حجم عرضه‌ها</span></li>
+     </ul>
+  </div>
+  
+</div>
+</ion-item> 
+
+<ion-item > 
+<div class="wrapper">
+     
+  <div class="profileWidget" style="background: #40434b;">
+     <h4>بازار فراورده‌های نفتی</h4>
+     <div class="profileBanner" style="background-image: url('../../assets/icon/oilProduct.jfif');">
+
+     </div>
+     <h5>اطلاعات پایه</h5>
+     <ul style="   background:rgb(174, 174, 174)">
+        <li><h4>625</h4><span>تعداد عرضه</span></li><li><h4>453</h4><span>حجم عرضه‌ها</span></li>
+     </ul>
+  </div>
+  
+</div>
+
+
+
+
+<div class="wrapper"> 
+   
+<div class="profileWidget" style="background: #8c8435;">
+   <h4>بازار پتروشیمی</h4>
+   <div class="profileBanner" style="background-image: url('../../assets/icon/petrol.png');">
+
+   </div>
+   <h5>اطلاعات پایه</h5>
+   <ul style="   background: rgb(214, 209, 159);">
+      <li><h4>142</h4><span>تعداد عرضه</span></li><li><h4>4475</h4><span>حجم عرضه‌ها</span></li>
+   </ul>
+</div>
+
+</div>
+</ion-item> 
+
+
+
+
+<ion-card no-margin class="no-radius" color="light" >
+  <ion-item lines="none"  >
+
+      <ion-thumbnail  *ngIf="!(bitCoinValue>0)" slot="start">
+          <div class="post">
+    <div  class="avatar"></div> 
+    </div>
+      </ion-thumbnail>
+
+      <ion-thumbnail *ngIf="bitCoinValue>0"  slot="start">
+        <img  src="assets/img/BitCoin.png">
+      </ion-thumbnail>
+
+      <div    *ngIf="!(bitCoinValue>0)"  class="post fixedLeft">
+          <div   class="line fixedLeft"></div>
+        </div>
+      <ion-label   *ngIf="(bitCoinValue>0)" style="direction: ltr" [ngClass]="{'increasePrice': bitCoinValue>oldBitCoinValue ,'reducePrice': oldBitCoinValue>bitCoinValue }">{{bitCoinValue}}</ion-label>
+   
+  </ion-item> 
+</ion-card>
+
+
+  <!-- <ion-card no-margin class="no-radius" color="light">
+    <ion-item href="#" class="activated">
+      <ion-icon name="wifi" slot="start"></ion-icon> 
+      <ion-label>Card Link Item 1 .activated</ion-label>
+    </ion-item>
+  
+    <ion-item href="#"  >
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+  
+    <ion-item class="activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label>Card Button Item 1 .activated</ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Card Button Item 2</ion-label>
+    </ion-item>
+  </ion-card> -->
+ 
+
+    <!-- <ion-card class="bg-white">
+        <ion-img [src]="themeCover"></ion-img>
+        <ion-button expand="full" color="dark"   no-margin>
+            نمایش تصویر
+           </ion-button>
+      </ion-card>
+  
+  
+    <ion-button margin shape="round" expand="full" color="secondary"  >
+     نمایش فیلتر
+    </ion-button> -->
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title> </ion-title>
+  </ion-toolbar>
+</ion-footer>

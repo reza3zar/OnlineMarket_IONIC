@@ -1,0 +1,252 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button color="secondary"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+          <ion-text color="light">
+            <ion-text color="light" class="fw700">فروشگاه</ion-text>
+          </ion-text>
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="medium"  >
+          <ion-icon name="cart"></ion-icon>
+          <ion-badge color="dark" slot="end"  >0</ion-badge>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+      <ion-searchbar placeholder="جستجو کالا"    ></ion-searchbar>
+      <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="medium"  >
+          <ion-icon name="options"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <ion-content color="white" *ngIf="!isLoadedpage"  >
+ <div  class="loader ">loading </div>
+  </ion-content> -->
+
+
+
+
+<ion-content color="white"    >
+  
+ 
+
+    <ion-grid>
+
+
+
+        <ion-row >
+            <ion-col size="12">
+    
+                <div style="margin: 0px">
+                    <rotate-carousel  height=100px    depth="300px" period="5.5s" direction="reverse">
+                        <!-- <ng-template rotateCarouselItem>
+                            <img src="../../assets/img/1000007162.jpg"/>
+                        </ng-template> -->
+                        <ng-template rotateCarouselItem>
+                            <img src="../../assets/img/1000007288.jpg"/>
+                        </ng-template>
+
+                        
+                  
+
+                        <!-- <ng-template rotateCarouselItem>
+                            <img src="../../assets/img/1000007160.jpg"/>
+                        </ng-template> -->
+
+                        <ng-template rotateCarouselItem>
+                            <img src="../../assets/img/5d46d8cc810b7.jpg"/>
+                        </ng-template>
+
+                        
+
+                        <ng-template rotateCarouselItem>
+                            <img src="../../assets/img/1000007156.jpg"/>
+                        </ng-template>
+
+                        
+
+                        <ng-template rotateCarouselItem>
+                            <img src="../../assets/img/5d46d733b6371.jpg"/>
+                        </ng-template>
+        
+                        <ng-template rotateCarouselItem>
+                          <img src="../../assets/img/5d4533ae146a7.jpg"/>
+                      </ng-template>
+
+                      <ng-template rotateCarouselItem>
+                          <img src="../../assets/img/5d466624bca75.jpg"/>
+                      </ng-template>
+
+                      
+                      <ng-template rotateCarouselItem>
+                          <img src="../../assets/img/5d4666a29a169.jpg"/>
+                      </ng-template>
+                      
+                      </rotate-carousel>
+                </div>
+
+          </ion-col>
+        </ion-row>
+
+ 
+
+
+        <ion-row >
+          <ion-col size="12" style="margin-top:10px">
+              <div>
+                  <ring-carousel [enableControl]="false" #ringCarousel>
+                      <ng-template ringCarouselItem>
+                          <div style="height: 100px; background-color: white; display: flex; align-items: center; justify-content: space-evenly;">
+                              <a (click)="ringCarousel.prev()" class="next round">  &laquo;</a>
+                               <ion-card class="bg-white" no-margin   routerDirection="forward"  >
+                                  <img src="../../assets/img/1000007160.jpg"/>
+                                </ion-card>
+                              <a (click)="ringCarousel.next($event)" class="previous round"> &raquo; </a>
+                          </div>
+                      </ng-template>
+                      <ng-template ringCarouselItem>
+                          <div style="height: 100px; background-color: white; display: flex; align-items: center; justify-content: space-evenly;">
+                              <a (click)="ringCarousel.prev()" class="next round">  &laquo;</a>
+                                  <ion-card class="bg-white" no-margin>
+                                      <img src="../../assets/img/5d3f2e4e6eaa8.jpg"/>
+                                    </ion-card>
+                              <a (click)="ringCarousel.next($event)" class="previous round"> &raquo; </a>
+                          </div>
+                      </ng-template>
+            
+                  </ring-carousel>
+              </div>
+
+
+            
+          </ion-col>
+     </ion-row>
+
+     <ion-row >
+        <ion-col size="12">
+            <ion-card class="bg-white" no-margin (click)="navigateToCategoryDetails(2)">
+                <img src="../../assets/img/5d40283bc4b07.jpg"/>
+              </ion-card>
+        </ion-col>
+    </ion-row>
+
+ 
+
+    <ion-row >
+        <ion-col size="12">
+            <ion-card class="bg-white" no-margin (click)="navigateToCategoryDetails(2)">
+                <img src="../../assets/img/5d4529759f76e.jpg"/>
+              </ion-card>
+        </ion-col>
+    </ion-row>
+
+<ion-row>
+    <ion-col size=12>
+        <div class="main-carousel" >
+            <img class="carousel-cell" style="margin-right: 4px;border-radius: 6px"  src="../../assets/img/5cfe6f088dc85.jpg" (click)="navigateToCategoryDetails(1)" />
+            <img class="carousel-cell" style="margin-right: 4px;border-radius: 6px"  src="../../assets/img/5d452d93d35eb.jpg" />
+            <img class="carousel-cell" style="margin-right: 4px;border-radius: 6px"  src="../../assets/img/5d452a911a558.jpg" />
+            <img class="carousel-cell" style="margin-right: 4px;border-radius: 6px"  src="../../assets/img/5d452a0c878f3.jpg" />
+            <img class="carousel-cell" style="margin-right: 4px;border-radius: 6px"  src="../../assets/img/5d4531fa943d0.jpg" />
+            <img class="carousel-cell" style="margin-right: 1px;border-radius: 6px"  src="../../assets/img/5d452d14c1c58.jpg" />
+          </div>
+    </ion-col>
+</ion-row>
+
+
+<ion-row >
+    <ion-col size="12">
+        <ion-card class="bg-white" no-margin (click)="navigateToCategoryDetails(2)">
+            <img src="../../assets/img/5d4667f10f4a9.jpg"/>
+          </ion-card>
+    </ion-col>
+</ion-row>
+
+
+
+     <ion-row >
+        <ion-col size="6">
+            <ion-card class="bg-white" no-margin (click)="navigateToCategoryDetails(2)">
+                <img src="../../assets/img/5cfe6fea32e16.jpg"/>
+              </ion-card>
+        </ion-col>
+        <ion-col size="6">
+            <ion-card class="bg-white" no-margin>
+                <img src="../../assets/img/5cfe70735e36b.jpg"/>
+              </ion-card>
+        </ion-col>
+   </ion-row>
+
+ 
+
+ 
+ 
+
+
+ 
+
+    <ion-row >
+        <ion-col size="4">
+          
+      <ion-card class="bg-white" no-margin>
+          <img src="../../assets/img/1000006753.jpg"/>
+        </ion-card>
+          </ion-col>
+    
+          <ion-col size="4">
+              <ion-card class="bg-white"  no-margin>
+                  <img src="../../assets/img/1000006757.jpg"/>
+                </ion-card>
+            </ion-col>
+    
+            <ion-col size="4" >
+                <ion-card class="bg-white" no-margin>
+                    <img src="../../assets/img/1000006755.jpg"/>
+                  </ion-card>
+              </ion-col>
+        </ion-row>
+ 
+
+
+        <ion-row >
+            <ion-col size="4" >
+               
+        <ion-card class="bg-white" no-margin>
+            <img src="../../assets/img/1000006751.jpg"/>
+          </ion-card>
+              </ion-col>
+        
+              <ion-col size="4" >
+                
+  
+        <ion-card class="bg-white" no-margin>
+            <img src="../../assets/img/1000006891.jpg"/>
+          </ion-card>
+  
+                </ion-col>
+        
+                <ion-col size="4" >
+                    <ion-card class="bg-white" no-margin>
+                        <img src="../../assets/img/1000006786.jpg"/>
+                      </ion-card>
+                  </ion-col>
+            </ion-row>
+
+
+
+
+
+ 
+
+  
+  
+    </ion-grid>
+
+
+</ion-content>

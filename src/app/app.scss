@@ -1,0 +1,341 @@
+@import '../../node_modules/ion-refresh-native/dist/scss/ion-refresh-native';
+
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+*{
+    direction: rtl
+} 
+
+ion-content {
+    --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+}
+
+ion-list {
+    &.list-md {
+        padding: 0;
+    }
+}
+
+ion-infinite-scroll-content{
+  min-height: 1px;
+}
+
+
+.fixedLeft{
+  left: 0;
+position: absolute;
+margin-top: 38px;
+margin-left: 9px;
+}
+
+.reducePrice {
+  animation: reducePriceFrame 5s linear ;
+  font-size:bold;
+}
+
+@keyframes reducePriceFrame {  
+    0%{     color: #000;    }
+    49%{    color: red; font-weight: 400; }
+    50%{    color: red;  font-weight: 700;}
+    99%{    color:red; font-weight: 300; }
+    100%{   color: #000;    }
+}
+
+.increasePrice {
+  animation: increasePriceFrame 5s linear ;
+  font-size:bold;
+}
+
+@keyframes increasePriceFrame {  
+    0%{     color: #000;    }
+    49%{    color: green; font-weight: 400; }
+    50%{    color: green; font-weight: 700;}
+    99%{    color:green;  font-weight: 300;}
+    100%{   color: #000;    }
+}
+
+.post {
+ 
+  height: 80px;
+}
+.post .avatar {
+  float: left;
+  width: 52px;
+  height: 52px;
+  background-color: #ccc;
+  border-radius: 25%;
+  margin: 8px;
+  background-image: linear-gradient(90deg, rgb(236, 233, 233) 0px, rgba(229, 229, 229, 0.8) 40px, rgb(233, 227, 227) 80px);
+  background-size: 600px;
+  animation: shine-avatar 2s infinite ease-out; 
+} 
+.post .line {
+  float: left;
+  width: 140px;
+  height: 16px;
+  margin-top: 12px;
+  border-radius: 7px;
+  background-image:  linear-gradient(90deg, rgb(236, 233, 233) 0px, rgba(229, 229, 229, 0.8) 40px, rgb(233, 227, 227) 80px);
+  background-size: 600px;
+  animation: shine-lines 3s infinite ease-out;
+}
+.post .avatar + .line {
+  margin-top: 11px;
+  width: 100px;
+}
+.post .line ~ .line {
+  background-color: #ddd;
+}
+
+@keyframes shine-lines {
+  0% {
+    background-position: -100px;
+  }
+  40%, 100% {
+    background-position: 140px;
+  }
+}
+@keyframes shine-avatar {
+  0% {
+    background-position: -32px;
+  }
+  40%, 100% {
+    background-position: 208px;
+  }
+}
+
+
+
+  //Loading .............................
+  .loader {
+    color: #081e3f;
+    font-size: 90px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  @-webkit-keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @-webkit-keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+
+  /*
+ * Variables
+ */
+
+:root {  
+  --card-padding: 24px;
+  --card-height: 340px;
+  --card-skeleton: linear-gradient(lightgrey var(--card-height), transparent 0);
+  
+  --avatar-size: 32px;
+  --avatar-position: var(--card-padding) var(--card-padding);
+  --avatar-skeleton: radial-gradient(circle 16px at center, white 99%, transparent 0
+  );
+  
+  --title-height: 132px;
+  --title-width: 230px;
+  --title-position: var(--card-padding) 20px;
+  --title-skeleton: linear-gradient(white var(--title-height), transparent 0);
+  
+  --desc-line-height: 16px;
+  --desc-line-skeleton: linear-gradient(white var(--desc-line-height), transparent 0);
+  --desc-line-1-width:200px;
+  --desc-line-1-position: var(--card-padding) 242px;
+   --desc-line-3-width:200px;
+  --desc-line-3-position: var(--card-padding) 242px;
+  --desc-line-2-width:180px;
+  --desc-line-2-position: var(--card-padding) 265px;
+  
+  --footer-height: 40px;
+  --footer-position: 0 calc(var(--card-height) - var(--footer-height));
+  --footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
+  
+  --blur-width: 200px;
+  --blur-size: var(--blur-width) calc(var(--card-height) - var(--footer-height));
+}
+
+/*
+ * Card Skeleton for Loading
+ */
+/*
+ * Variables
+ */
+
+ :root {  
+  --card-padding: 10px;
+  --card-height: 340px;
+  --card-skeleton: linear-gradient(lightgrey var(--card-height), transparent 0);
+  
+  --avatar-size: 0px;
+  --avatar-position: var(--card-padding) var(--card-padding);
+  --avatar-skeleton: radial-gradient(circle 16px at center, white 99%, transparent 0
+  );
+  
+  --title-height: 132px;
+  --title-width: 160px;
+  --title-position: var(--card-padding) 20px;
+  --title-skeleton: linear-gradient(white var(--title-height), transparent 0);
+  
+  --desc-line-height: 16px;
+  --desc-line-skeleton: linear-gradient(white var(--desc-line-height), transparent 0);
+  --desc-line-1-width:150px;
+  --desc-line-1-position: var(--card-padding) 242px;
+ 
+  --desc-line-2-width:140px;
+  --desc-line-2-position: var(--card-padding) 265px;
+  
+  --footer-height: 40px;
+  --footer-position: 0 calc(var(--card-height) - var(--footer-height));
+  --footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
+  
+  --blur-width: 200px;
+  --blur-size: var(--blur-width) calc(var(--card-height) - var(--footer-height));
+}
+
+/*
+ * Card Skeleton for Loading
+ */
+
+.mycard {
+  width: 180px; //demo
+  height: var(--card-height);
+  
+  &:empty::after {
+    content:"";
+    display:block;
+    width: 100%;
+    height: 100%;
+    border-radius:6px;
+    box-shadow: 0 10px 45px rgba(0,0,0, .1);
+
+    background-image:
+      linear-gradient(
+        90deg, 
+        rgba(rgb(214, 196, 196), 0) 0, 
+        rgba(lightgrey, .8) 50%, 
+        rgba(lightgrey, 0) 100%
+      ),                          //animation blur
+      var(--title-skeleton),      //title
+      var(--desc-line-skeleton),  //desc1
+      var(--desc-line-skeleton),  //desc2
+      var(--avatar-skeleton),     //avatar
+      var(--footer-skeleton),     //footer bar
+      var(--card-skeleton)        //card
+    ;
+
+    background-size:
+      var(--blur-size),
+      var(--title-width) var(--title-height),
+      var(--desc-line-1-width) var(--desc-line-height),
+      var(--desc-line-2-width) var(--desc-line-height),
+      var(--avatar-size) var(--avatar-size),
+      100% var(--footer-height),
+      100% 100%
+    ;
+    
+    background-position:
+      -150% 0,                      //animation
+      var(--title-position),        //title
+      var(--desc-line-1-position),  //desc1
+      var(--desc-line-2-position),  //desc2
+      var(--avatar-position),       //avatar
+      var(--footer-position),       //footer bar
+      0 0                           //card
+    ;
+
+    background-repeat: no-repeat;
+    animation: loading 1.0s infinite;
+  }
+}
+
+@keyframes loading {
+  to {
+    background-position:
+      350% 0,        
+      var(--title-position),  
+      var(--desc-line-1-position),
+      var(--desc-line-2-position),
+      var(--avatar-position),
+      var(--footer-position),
+      0 0
+    ;
+  }
+}
+
+
+ 

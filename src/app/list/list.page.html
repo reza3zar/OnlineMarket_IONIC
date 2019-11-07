@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      ذخیره محلی      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="white">
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked> نام کاربری :</ion-label>
+      <ion-input [(ngModel)]="userName" type="text"> </ion-input>
+    </ion-item>
+  
+ 
+
+    <ion-button margin shape="round" expand="full" color="secondary" (click)="saveUserstorege()"  >
+      ذخیره
+     </ion-button>
+
+     <ion-button margin shape="round" expand="full" color="light" (click)="loadDataUserstorege()"  >
+      بارگذاری
+     </ion-button>
+     
+
+
+ 
+
+
+  </ion-list>
+
+  <!-- <rotate-carousel height="300px" width="450px" depth="700px" period="2.5s" direction="reverse">
+      <ng-template rotateCarouselItem>
+          <img src="../../assets/img/1000007145.jpg"/>
+      </ng-template>
+      <ng-template rotateCarouselItem>
+          <img src="../../assets/img/1000007141.jpg"/>
+      </ng-template>
+  </rotate-carousel> -->
+
+  <!-- <div style="margin: 0px">
+      <rotate-carousel    depth="300px" period="5.5s" direction="reverse">
+          <ng-template rotateCarouselItem>
+              <img src="../../assets/img/5cfe6f088dc85.jpg"/>
+          </ng-template>
+          <ng-template rotateCarouselItem>
+              <img src="../../assets/img/5cfe6fea32e16.jpg"/>
+          </ng-template>
+        </rotate-carousel>
+  </div> -->
+ 
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-content>
+		<div class="app">
+				<button class="login" [ngClass]="{'active': this.isSignIn,'inactive': this.isSingUp}"   (click)="signToSystem(true)">
+					<i class="fa fa-lock"></i>
+					ورود
+				</button>
+				<button for="signup" [ngClass]="{'inactive': this.isSignIn,'active': this.isSingUp}"    class="signup" (click)="signToSystem(false)">
+					<i class="fa fa-user-plus"></i>
+					ثبت نام
+				</button>
+				
+				<form class="login-form" [ngClass]="{'hide': !this.isSignIn}" >
+					<h2>ورود به سامانه</h2>
+				<img src="../../assets/icon/fingerprint.png"/> 
+					<input type="text" placeholder="نام کاربری" [(ngModel)]="this.logininformation.userName" ngkeyd  name="userName"  (keyup)="keyPressUserName($event)"   [ngClass]="{'ltr': usernamehasValue,'rtl': !usernamehasValue}" >
+					<input type="password" placeholder="شناسه عبور" [(ngModel)]="this.logininformation.password" name="password" (keyup)="keyPressPassword($event)"   [ngClass]="{'ltr': PasswordValue,'rtl': !PasswordValue}">
+			 
+					<div class="can-toggle">
+							<input id="a" type="checkbox" [(ngModel)]="this.logininformation.rememberMe" name="remeberState" >
+							<label for="a">
+							<div class="can-toggle__label-text">مرا در خاطر داشته باش</div>
+			
+							<div class="can-toggle__switch" data-checked="بلی" data-unchecked="خیر" ></div>
+							</label>
+					 </div> 
+			
+					<button class="button" (click)="loginToSystem()">ورود    </button>
+					<p>فراموشی رمز عبور؟</p>
+				</form> 
+				
+				<form class="signup-form" [ngClass]="{'hide': !this.isSingUp}">
+					<h2>ثبت نام</h2>
+				<img src="../../assets/icon/account.png"/> 
+				<br>
+					<input type="text" placeholder="نام خانوادگی" class="half">
+					<input type="text" placeholder="نام" class="half">
+					<input type="text" placeholder="پست الکترونیکی">
+				<input type="password" placeholder="شناسه عبور">
+					<input type="password" placeholder="تکرار شناسه عبور">
+				
+					<button class="button">ایجاد حساب کاربری</button>
+					<p (click)="signToSystem(true)">هم اکنون کاربر سیستم هستم!</p>
+				</form>
+			</div>
+</ion-content>
